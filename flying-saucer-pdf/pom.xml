@@ -19,7 +19,7 @@
   <properties>
     <bouncycastle.version>1.59</bouncycastle.version>
     <junit.version>4.12</junit.version>
-    <openpdf.version>1.0.1</openpdf.version>
+    <openpdf.version>1.0.5</openpdf.version>
     <itext.version>2.1.7</itext.version>
   </properties>
 
@@ -41,13 +41,13 @@
     <profile>
       <id>itext</id>
       <activation>
-        <activeByDefault>true</activeByDefault>
+        <activeByDefault>false</activeByDefault>
       </activation>
       <dependencies>
-      	<!-- 
+      	<!--
       		Note: The iText Bouncy Castle dependencies have been moved to a new group and version on maven central.
       		This caused some of the artifacts to be resolved twice. By excluding dependencies from the old group
-      		and adding corresponding dependencies from the updated group, the artifacts are only resolved once. 
+      		and adding corresponding dependencies from the updated group, the artifacts are only resolved once.
       	 -->
         <dependency>
           <groupId>com.lowagie</groupId>
@@ -65,7 +65,7 @@
             <exclusion>
               <groupId>bouncycastle</groupId>
               <artifactId>bctsp-jdk14</artifactId>
-            </exclusion>            
+            </exclusion>
           </exclusions>
         </dependency>
         <dependency>
@@ -98,6 +98,9 @@
     </profile>
     <profile>
       <id>openpdf</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
       <dependencies>
         <dependency>
           <groupId>com.github.librepdf</groupId>

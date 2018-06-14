@@ -8,7 +8,7 @@ import java.net.URL;
 
 public class EndlessLoopTest {
 
-  @Test(timeout = 3000L)
+  @Test(timeout = 30000L)
   public void testWordwrap() throws Exception {
     URL htmlUrl = getClass().getResource("EndlessLoopTest_wordwrap.html");
     File htmlFile = new File(htmlUrl.toURI());
