@@ -19,7 +19,7 @@
   <properties>
     <bouncycastle.version>1.59</bouncycastle.version>
     <junit.version>4.12</junit.version>
-    <openpdf.version>1.0.1</openpdf.version>
+    <openpdf.version>1.1.555-SNAPSHOT</openpdf.version>
     <itext.version>2.1.7</itext.version>
   </properties>
 
@@ -41,7 +41,7 @@
     <profile>
       <id>itext</id>
       <activation>
-        <activeByDefault>true</activeByDefault>
+        <activeByDefault>false</activeByDefault>
       </activation>
       <dependencies>
       	<!-- 
@@ -98,6 +98,9 @@
     </profile>
     <profile>
       <id>openpdf</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
       <dependencies>
         <dependency>
           <groupId>com.github.librepdf</groupId>
